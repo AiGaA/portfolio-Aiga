@@ -6,8 +6,9 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #FFF0F5;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: white;
+    color: rgb(73, 73, 73);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 h1{
@@ -15,20 +16,24 @@ h1{
     font-style: normal;
     font-weight: 300;
     font-size: 3.2rem;
-    color: white;
+    color: rgb(221, 40, 146);
 }
 
-header {
+header, footer {
     display: flex;
-    background-image: linear-gradient(172deg, #36454F, rgb(216, 216, 216) );
     align-items: center;
     justify-content: space-around;
 }
 
 a {
     text-decoration: none;
-    color: white;
+    color: rgb(221, 40, 146);
     font-size: 1.2rem;
+}
+
+a:hover {
+    color: rgba(221, 40, 146, 0.6);
+    text-decoration: underline;
 }
 
 .flex-nav ul {
@@ -39,4 +44,47 @@ a {
 .flex-nav li {
     display: inline-block;
     padding: 0 10px;
+}
+
+.hero {
+    display: flex;
+    padding: 5rem 15%;
+    align-items: center;
+    justify-content: space-around;
+    background: linear-gradient(106.5deg, rgba(255, 215, 185, 0.91) 23%, rgba(223, 159, 247, 0.8) 93%);
+    color: rgb(73, 73, 73);
+    gap: 10%;
+    font-size: 20px;
+}
+.hero div {
+    flex-direction: column;
+    max-width: 40rem;
+}
+
+.hero img {
+    height: 230px;
+    width: 250px;
+    border-radius: 50%;
+    justify-content: space-around;
+}
+
+#btn-portfolio {
+    background: none;
+    border: 1.5px solid rgb(221, 40, 146);
+    border-radius: 6px;
+    color: rgb(221, 40, 146);
+    padding: 5px 20px;
+    margin: 10px 0px;
+    font-size: 1rem;
+}
+
+#btn-portfolio:hover {
+    background-color: rgba(221, 40, 146, 0.6);
+    color: pink;
+    border: 1.5px solid pink;
+}
+
+h3 {
+    text-align: center;
+    padding: 30px 0;
 }
