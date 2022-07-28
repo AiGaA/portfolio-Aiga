@@ -50,15 +50,22 @@ a:hover {
     padding: 0 10px;
 }
 
+.container{
+    background: linear-gradient(159.5deg, rgba(255, 255, 255, 0.91) 60%, rgba(223, 159, 247, 0.8) 60%),
+                linear-gradient(17.5deg, rgb(255, 192, 203) 60%, rgba(223, 159, 247, 0.8) 60%),
+                linear-gradient(18.5deg, rgb(221, 40, 146) 60%, rgba(114, 8, 153, 0.8) 60%);
+}
+ 
 .hero {
     display: flex;
-    padding: 5rem 15%;
+    padding: 6rem 15%;
     align-items: center;
     justify-content: space-around;
     /*background: linear-gradient(106.5deg, rgba(255, 215, 185, 0.91) 23%, rgba(223, 159, 247, 0.8) 93%);*/
     color: rgb(73, 73, 73);
-    gap: 10%;
-    font-size: 20px;
+    gap: 8%;
+    font-size: 26px;
+    color:rgb(221, 40, 146);
 }
 .hero div {
     flex-direction: column;
@@ -66,8 +73,8 @@ a:hover {
 }
 
 .hero img {
-    height: 230px;
-    width: 250px;
+    height: 300px;
+    width: 320px;
     border-radius: 50%;
     justify-content: space-around;
 }
@@ -84,8 +91,8 @@ a:hover {
 
 #btn-portfolio:hover {
     background-color: rgba(221, 40, 146, 0.6);
-    color: pink;
-    border: 1.5px solid pink;
+    color: rgb(253, 224, 229);
+    border: 1.5px solid rgb(253, 224, 229);
 }
 
 .mid-section {
