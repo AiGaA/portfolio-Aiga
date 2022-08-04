@@ -13,7 +13,9 @@
             <nav class="flex-nav">
                 <ul>
                     <li><a href="#about">About</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#my-work">Work</a></li>
                     <li><a href="#">Contact</a></li>
                     <li><a href="./documents/Aiga Andrejeva Web Developer CV.pdf" target="_blank">CV</a></li>
                 </ul>
@@ -34,13 +36,13 @@
             -->
         </div>
     </div>
-    <div class="about-section" id="about">
+    <div class="text-section" id="about">
         <h3><span>About Me</span></h3>
-        <div class="about-me-section">
+        <div class="description-section">
             <p>I am a web developer with passion for front-end development and focus on UX on web and mobile. I have recently 
                 succesfully completed a front-end development course, where I have learned a lot about HTML, CSS 
-                and JavaScript and enjoyed the creative and analytical parts of it. I aspire toward a career in web development, where
-                I could put my creative and analytical sides to create beautiful, interactive and user friendly software.
+                and JavaScript and enjoyed the creative and analytical parts of it. I aspire toward a career in web development, 
+                where I could put my creative and analytical sides to create beautiful, interactive and user friendly software.
             </p>
             <p>I believe that being a programmer in such rapidly evoling industry means that there is a constant learning.
                 And this is exactly what I enjoy the most and have passion for!
@@ -49,48 +51,71 @@
             </p>
         </div>
     </div>
-    <p>Some technologies worked with:</p>
+    <div class="text-section my-exp" id="experience">
+        <h3><span id="exp-span">Experience</span></h3>
+        <div class="description-section">
+            <p>
+                I have been working on different Android projects in past, where I gained a good experience in Java and Android
+                app development. I've built some interesting applications along the way, creating database applications, simple one page 
+                applications or even working on cool project where added different APIs, such as from Google, The Guardian, etc. 
+            </p>
+            <p>
+                I've started my journey to web development, when I took a challenge on to create a web application for a local company. 
+                In this project I got to use mainly Bootstrap and Python, Flask. This project showed me how much I enjoy to create interactive, 
+                useful and user friendly software and began to learn more about Web development, adding JavaScript and CSS into my other projects.
+            </p>
+        </div>
+        <div class="resume-text">
+            <p>Want to learn more about my past experience and projects?</p>
+            <button class="resume-btn">Download CV</button>
+        </div>
+    </div>
     <div class="skills-section">
-        <div class="skill-icon">
-            <img src="./images/html.png.crdownload" alt="HTML logo" id="html">
-        </div>
-        <div class="skill-icon">
-            <img src="./images/css3.png" alt="CSS logo" id="css">
-        </div>
-        <div class="skill-icon">
-            <img src="./images/JS.png" alt="JavaScript logo" id="js">
-        </div>
-        <div class="skill-icon">
-            <img src="./images/java.png" alt="Java logo" id="java">
-        </div>
-        <div class="skill-icon">
-            <img src="./images/python.png" alt="Python logo" id="python">
-        </div>
-        <div class="skill-icon">
-            <img src="./images/android.png" alt="Android logo" id="android">
-        </div>
-        <div class="skill-icon">
-            <img src="./images/JQuery.png" alt="jQuery logo" id="jquery">
-        </div>
-        <div class="skill-icon">
-            <img src="./images/bootstrap.png" alt="Bootstrap logo" id="bootstrap">
-        </div>
-        <div class="skill-icon">
-            <img src="./images/flask.png" alt="Flask logo" id="flask">
-        </div>
-        <div class="skill-icon">
-            <img src="./images/GitHub.png" alt="GitHub logo" id="github">
-        </div>
-        <div class="skill-icon">
-            <img src="./images/photoshop.png" alt="Adobe Photoshop logo" id="photoshop">
-        </div>
-        <div class="skill-icon">
-            <img src="./images/Illustrator.png" alt="Adobe Illustrator logo" id="illustrator">
+        <p>Some technologies I have worked with:</p>
+        <div class="skills-icon-list">
+            <div class="skill-icon">
+                <img src="./images/html.png.crdownload" alt="HTML logo" id="html">
+            </div>
+            <div class="skill-icon">
+                <img src="./images/css3.png" alt="CSS logo" id="css">
+            </div>
+            <div class="skill-icon">
+                <img src="./images/JS.png" alt="JavaScript logo" id="js">
+            </div>
+            <div class="skill-icon">
+                <img src="./images/java.png" alt="Java logo" id="java">
+            </div>
+            <div class="skill-icon">
+                <img src="./images/python.png" alt="Python logo" id="python">
+            </div>
+            <div class="skill-icon">
+                <img src="./images/android.png" alt="Android logo" id="android">
+            </div>
+            <div class="skill-icon">
+                <img src="./images/JQuery.jpeg" alt="jQuery logo" id="jquery">
+            </div>
+            <div class="skill-icon">
+                <img src="./images/bootstrap.png" alt="Bootstrap logo" id="bootstrap">
+            </div>
+            <div class="skill-icon">
+                <img src="./images/flask.png" alt="Flask logo" id="flask">
+            </div>
+            <div class="skill-icon">
+                <img src="./images/GitHub.png" alt="GitHub logo" id="github">
+            </div>
+            <div class="skill-icon">
+                <img src="./images/Linux.png" alt="Linux logo" id="linux">
+            </div>
+            <div class="skill-icon">
+                <img src="./images/photoshop.png" alt="Adobe Photoshop logo" id="photoshop">
+            </div>
+            <div class="skill-icon">
+                <img src="./images/Illustrator.png" alt="Adobe Illustrator logo" id="illustrator">
+            </div>
         </div>
     </div>
     <div class="projects-section" id="portfolio">
         <h3><span>My Work</span></h3>
-        <p>Web Development</p>
         <div class="projects-container">
             <figure class="projects-modal">
                 <figcaption><b>Calculator</b></figcaption>
@@ -101,9 +126,6 @@
             <figure class="projects-modal">
                 <figcaption><b>?</b></figcaption>
             </figure>
-        </div>
-        <p>Android Development</p>
-        <div class="projects-container">
             <figure class="projects-modal">
                 <figcaption><b>Android Application</b></figcaption>
             </figure>
@@ -112,18 +134,6 @@
             </figure>
             <figure class="projects-modal">
                 <figcaption><b>Android Application</b></figcaption>
-            </figure>
-        </div>
-        <p>Other</p>
-        <div class="projects-container">
-            <figure class="projects-modal">
-                <figcaption><b>Photography</b></figcaption>
-            </figure>
-            <figure class="projects-modal">
-                <figcaption><b>Graphic Design</b></figcaption>
-            </figure>
-            <figure class="projects-modal">
-                <figcaption><b>?</b></figcaption>
             </figure>
         </div>
     </div>
