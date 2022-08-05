@@ -4,21 +4,6 @@
 } 
 
 @font-face {
-    font-family: 'Roboto-Regular';
-    src: url(../fonts/Roboto-Regular.ttf) format('truetype');
-} 
-
-@font-face {
-    font-family: 'Roboto-Bold';
-    src: url(../fonts/Roboto-Bold.ttf) format('truetype');
-} 
-
-@font-face {
-    font-family: 'Roboto-Italic';
-    src: url(../fonts/Roboto-LightItalic.ttf) format('truetype');
-} 
-
-@font-face {
     font-family: 'PlayfairDisplay-Medium';
     src: url(../fonts/PlayfairDisplay-Medium.ttf) format('truetype');
 }
@@ -26,6 +11,21 @@
 @font-face {
     font-family: 'PlayfairDisplay-Bold';
     src: url(../fonts/PlayfairDisplay-Bold.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Montserrat-light';
+    src: url(../fonts/Montserrat-Light.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Montserrat-Bold';
+    src: url(../fonts/Montserrat-SemiBold.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Montserrat-Medium';
+    src: url(../fonts/Montserrat-Medium.ttf) format('truetype');
 }
 
 :root {
@@ -43,7 +43,7 @@ body {
     padding: 0;
     background-color: var(--bgColor);
     color: var(--primaryColor);
-    font-family: 'Roboto-Regular', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Montserrat-light', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 h1{
@@ -59,7 +59,7 @@ header, footer {
 }
 
 footer {
-    padding: 20px 0;
+    padding: 40px 0;
 }
 
 a {
@@ -69,7 +69,7 @@ a {
 }
 
 a:hover {
-    color: var(--accentColor);
+    color: rgba(255, 255, 255, 0.8);
     text-decoration: underline;
 }
 
@@ -84,8 +84,8 @@ a:hover {
 }
 
 .container {
-    background: linear-gradient(-45deg, #F2C4CE,  #dd2892, rgb(50, 25, 79), rgb(122, 101, 149));
-	background-size: 400% 400%;
+    background: linear-gradient(-45deg, rgba(242, 196, 206),  rgba(221, 40, 146), rgba(50, 25, 79), rgba(122, 101, 149));
+    background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
 }
 
@@ -120,14 +120,13 @@ a:hover {
 
 h2 {
     color: var(--bgColor);
-    font-family: 'PlayfairDisplay-Bold', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Montserrat-Bold', 'Segoe UI', Tahoma, Geneva, Verdana, sa;
     font-size: 2.8rem;
-    font-weight: lighter;
     margin: 0;
     padding-top: 10px;
     
 }
-
+/*
 #btn-portfolio {
     background: none;
     border: 1.5px solid var(--bgColor);
@@ -143,7 +142,7 @@ h2 {
     color: var(--bgColor);
     border: 1.5px solid var(--bgColor);
 }
-
+*/
 .projects-section {
     padding: 7rem 15%;
     display: flex;
@@ -172,41 +171,60 @@ h3 {
     border-bottom: 1px solid rgb(73, 73, 73);
     line-height: 0.1em;
     margin: 10px 0 20px;
-    font-family: 'PlayfairDisplay-Bold', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Montserrat-Bold', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 h3 span {
-    background: white;
+    background: #ffffff;
     padding: 0 10px;
 }
 
 .text-section.my-exp {
-    background: rgb(240, 233, 250);
+    /*background: rgb(240, 233, 250); */
+    background:  rgb(122, 101, 149);
+    color: #ffffff;
+    border-bottom: #ffffff;
 }
 
+.text-section.my-exp h3 {
+    border-bottom: 1px solid #ffffff;
+} 
+
 #exp-span{
-    background: rgb(240, 233, 250);
+    background: rgb(122, 101, 149);
+    color: #ffffff;
 }
 
 .resume-text {
-    padding-top: 5%;
-    font-size: 20px;
+    padding-top: 4%;
+    font-size: 22px;
+    text-align: center;
 }
 
 .resume-btn {
-    align-items: center;
-    font-size: 1em;
+    margin-top: 3%;
+    font-size: 0.9em;
     background: none;
     color: #ffffff;
-    width: 10rem;
+    width: 12rem;
     height: 3rem;
     border-radius: 7px;
+    border: 1.6px solid #ffffff;
+    cursor: pointer;
+    font-family: 'Montserrat-Medium';
+}
+
+.resume-btn:hover {
+    color: rgba(255, 255, 255, 0.8);
+    border: 1.6px solid rgba(255, 255, 255, 0.8);
+    text-decoration: none;
 }
 
 .skills-section {
     padding: 5% 15%;
     text-align: center;
     font-size: 22px;
+    font-family: 'Montserrat-Medium';
 }
 
 .skills-icon-list {
@@ -219,7 +237,7 @@ h3 span {
 }
 
 .skill-icon img {
-    height: 100px;
+    height: 80px;
     width: auto;
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
@@ -243,7 +261,7 @@ h3 span {
 }
 
 #js {
-    height: 95px;
+    height: 77px;
 }
 
 .projects-container {
@@ -254,7 +272,11 @@ h3 span {
 }
 
 .projects-section {
-    background: #eeeeee;
+    background: #efefef;
+}
+
+#work-span {
+    background: #efefef;
 }
 
 .projects-modal {
@@ -262,8 +284,8 @@ h3 span {
     font-size: 1.5em;
     display: flex;
     width: 320px;
-    height: 250px;
-    background: linear-gradient(125deg, #F2C4CE, #dd2892);
+    height: 230px;
+    background: linear-gradient(125deg, #F2C4CE, #dd2892 110%);
     align-items: center;
     justify-content: center;
     cursor: pointer;
@@ -272,6 +294,6 @@ ease-out 100ms
 }
 
 .projects-modal:hover {
-    opacity: 0.5;
+    opacity: 0.7;
 }
 
