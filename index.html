@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/script.js" defer></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aiga Andrejeva - Portfolio</title>
@@ -116,28 +117,45 @@
     <div class="projects-section" id="portfolio">
         <h3><span id="work-span">My Work</span></h3>
         <div class="projects-container">
-            <figure class="projects-modal">
-                <figcaption><b>Calculator</b></figcaption>
-            </figure>
-            <figure class="projects-modal">
-                <figcaption><b>Rock, Paper Scissors Game</b></figcaption>
-            </figure>
-            <figure class="projects-modal">
-                <figcaption><b>?</b></figcaption>
-            </figure>
-            <figure class="projects-modal">
-                <figcaption><b>Android Application</b></figcaption>
-            </figure>
-            <figure class="projects-modal">
-                <figcaption><b>Android Application</b></figcaption>
-            </figure>
-            <figure class="projects-modal">
-                <figcaption><b>Android Application</b></figcaption>
-            </figure>
+            <div class="projects-modal">
+                <img src="./images/mx-check.PNG">
+                <div class="image-overlay image-overlay-blur">
+                    <div class="image-title" id="open_modal">MX Check</div>
+                </div>
+            </div>
+            <div class="projects-modal">
+                <img src="./images/rock-paper-scissors.PNG">
+                <div class="image-overlay image-overlay-blur">
+                    <div class="image-title">Rock, Paper, Scissors Game</div>
+                </div>
+            </div>
+            <div class="projects-modal">
+                <img src="./images/calculator.PNG">
+                <div class="image-overlay image-overlay-blur">
+                    <div class="image-title">Calculator</div>
+                </div>
+            </div>
+            <div class="projects-modal">
+                <img src="./images/peony-website.PNG">
+                <div class="image-overlay image-overlay-blur">
+                    <div class="image-title">Responsive Website</div>
+                </div>
+            </div>
+            <div class="projects-modal">
+                <img src="./images/personal-website.PNG">
+                <div class="image-overlay image-overlay-blur">
+                    <div class="image-title">Personal Website</div>
+                </div>
+            </div>
         </div>
     </div>
-    
-    
+    <div class="modal-container" id="modal_container">
+        <div class="modal">
+            <h2>MX Check</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non quam optio aperiam, iure voluptas dolor!</p>
+            <button id="close">Close</button>
+        </div>
+    </div>
 </body>
 <footer>&copy; AiGaA, 2022</footer>
 </html>
