@@ -2,41 +2,52 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
     <script src="./js/script.js" defer></script>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aiga Andrejeva - Portfolio</title>
 </head>
 <body>
-    <div class="container">
-        <header id="header-id">
-            <h1 id="logo-text">AiGa.</h1>
-            <nav class="flex-nav">
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#portfolio">Work</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </nav>
-        </header>
-        <div class="hero"> 
-            <div>
-                <img src="./images/index3.png" alt="Aiga Andrejeva - Web Developer">
-                
-                <h2>Hi, my name is Aiga!</h2>
-                <p>Web developer with passion for front end development and UX design.</p>
+    <!--Main banner section-->
+    <div class="image-container">
+        <div class="container">
+            <header class="navbar navbar-scroll" id="navbar-id">
+                <h1 id="logo-text">AiGa.</h1>
+                <nav>        
+                    <ul class="flex-nav">
+                        <li class="about"><a href="#about">About</a></li>
+                        <li class="experience"><a href="#experience">Experience</a></li>
+                        <li class="skills"><a href="#skills">Skills</a></li>
+                        <li class="portfolio"><a href="#portfolio">Work</a></li>
+                        <li class="contact"><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="burger">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+            </header>
+            <div class="hero"> 
+                <div>
+                    <img src="./images/index3.png" alt="Aiga Andrejeva - Web Developer">
+                    
+                    <h2>Hi, my name is Aiga!</h2>
+                    <p>Web developer with passion for front end development and UX design.</p>
+                    <!--
+                    <button id="btn-portfolio">Contact me</button>
+                    -->
+                </div>
                 <!--
-                <button id="btn-portfolio">Contact me</button>
+                    <img src="./images/index3.png" alt="Aiga Andrejeva - Web Developer">
                 -->
             </div>
-            <!--
-                <img src="./images/index3.png" alt="Aiga Andrejeva - Web Developer">
-            -->
         </div>
     </div>
-    <div class="text-section" id="about">
+    <!--Introduction section-->
+    <section class="section text-section" id="about">
         <h3><span>Hello World!</span></h3>
         <div class="description-section">
             <p>I am a web developer with passion for front-end development and focus on UX on web and mobile. I have recently 
@@ -50,8 +61,9 @@
             <p>Whenever I am not at my computer, I enjoy meeting friends, spending time with family and traveling. 
             </p>
         </div>
-    </div>
-    <div class="text-section my-exp" id="experience">
+    </section>
+    <!--Experience section-->
+    <section class="section text-section my-exp" id="experience">
         <h3><span id="exp-span">Experience</span></h3>
         <div class="description-section">
             <p>
@@ -66,11 +78,12 @@
             </p>
         </div>
         <div class="resume-text">
-            <p>Want to learn more about my past experience and projects?</p>
+            <p>Learn about my experience and projects, download a copy of my CV below.</p>
             <button class="resume-btn" id="button"><a href="./documents/Aiga Andrejeva Web Developer CV.pdf" target="_blank">Download CV</a></button>
         </div>
-    </div>
-    <div class="skills-section" id="skills">
+    </section>
+    <!--Skills section-->
+    <section class="section skills-section" id="skills">
         <p>Some technologies I have worked with:</p>
         <div class="skills-icon-list">
             <div class="skill-icon">
@@ -101,7 +114,7 @@
                 <img src="./images/flask.png" alt="Flask logo" id="flask">
             </div>
             <div class="skill-icon">
-                <img src="./images/GitHub.png" alt="GitHub logo" id="github">
+                <img src="./images/octocat.png" alt="Octocat - GitHub logo" id="github">
             </div>
             <div class="skill-icon">
                 <img src="./images/Linux.png" alt="Linux logo" id="linux">
@@ -113,49 +126,117 @@
                 <img src="./images/Illustrator.png" alt="Adobe Illustrator logo" id="illustrator">
             </div>
         </div>
-    </div>
-    <div class="projects-section" id="portfolio">
+    </section>
+
+    <!--My Work section-->
+    <section class="section projects-section" id="portfolio">
         <h3><span id="work-span">My Work</span></h3>
         <div class="projects-container">
             <div class="projects-modal">
                 <img src="./images/mx-check.PNG">
                 <div class="image-overlay image-overlay-blur">
-                    <div class="image-title" id="open_modal">MX Check</div>
+                    <div class="image-title" id="open_modal1">MX Check</div>
                 </div>
             </div>
             <div class="projects-modal">
                 <img src="./images/rock-paper-scissors.PNG">
                 <div class="image-overlay image-overlay-blur">
-                    <div class="image-title">Rock, Paper, Scissors Game</div>
+                    <div class="image-title" id="open_modal2">Rock, Paper, Scissors Game</div>
                 </div>
             </div>
             <div class="projects-modal">
                 <img src="./images/calculator.PNG">
                 <div class="image-overlay image-overlay-blur">
-                    <div class="image-title">Calculator</div>
+                    <div class="image-title" id="open_modal3">Calculator</div>
                 </div>
             </div>
             <div class="projects-modal">
                 <img src="./images/peony-website.PNG">
                 <div class="image-overlay image-overlay-blur">
-                    <div class="image-title">Responsive Website</div>
+                    <div class="image-title" id="open_modal4">Responsive Website</div>
                 </div>
             </div>
             <div class="projects-modal">
                 <img src="./images/personal-website.PNG">
                 <div class="image-overlay image-overlay-blur">
-                    <div class="image-title">Personal Website</div>
+                    <div class="image-title" id="open_modal5">Personal Website</div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="modal-container" id="modal_container">
+    </section>
+    <!--Contact me section-->
+    <section class="section text-section" id="contact">
+        <h3><span>Get in touch!</span></h3>
+        <div class="description-section" id="contact-me-text">
+            <p>For any questions, work opportunities or if you are looking for just a friendly chat - I am always open to emails!</p>
+            <button class="email-button"><a href="mailto:aiga.andrejeva@gmail.com" target="_blank">Contact Me</a></button>
+        </div>
+    </section>
+
+    
+
+    <!--Project modals-->
+    <div class="modal-container" id="modal1">
         <div class="modal">
-            <h2>MX Check</h2>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non quam optio aperiam, iure voluptas dolor!</p>
-            <button id="close">Close</button>
+            <button class="modal-close-btn" id="close1">X</button>
+            <h2>MX Check Website</h2>
+            <p>This project was part of local motorbike business, where I got to build a whole website from scratch and be ivolved 
+                in process from the very beginning stages. I've got to create CRUD based Web Application, using Python, Flask, 
+                SQLAlchemy and Bootstrap.</p>
+            <p>I worked on design and implemented the logic for database queries, and also were involved in deploying this Web App to the server.</p>
+        </div>
+    </div>
+    <div class="modal-container" id="modal2">
+        <div class="modal">
+            <button class="modal-close-btn" id="close2">X</button>
+            <h2>Rock, Paper & Scissors Game</h2>
+            <p>This project was done as part of a 'Brainnest' Front-end Development program to showcase and practice JavaScript
+                knowledge. I got to add a little it of CSS for the page to look a little bit more interactive. </p>
+            <p>To start a game, user needs to click on any of the emoji choices and computer will automatically throw its choice.
+                The game goes as far as any of players has won 5 rounds.</p>
+            <p><small>This project has been taken down from the server since March '22, and is not currently available for public.</small></p>
+            <button class="modal-link-btn"><a href="https://github.com/AiGaA/main-javascript-project" target="_blank">Source Code</a></button>
+            <button class="modal-link-btn"><a href="https://aigaa.github.io/main-javascript-project/" target="_blank">Project</a></button>
+        </div>
+    </div>
+    <div class="modal-container" id="modal3">
+        <div class="modal">
+            <button class="modal-close-btn" id="close3">X</button>
+            <h2>Calculator</h2>
+            <p>Simple calculator done using JavaScript, as the final project of the 'Brainnest' Front-end Development program.</p>
+            <p>For this project mainly JavaScript and CSS was used.</p>
+            <button class="modal-link-btn"><a href="https://github.com/AiGaA/js-project-calculator" target="_blank">Source Code</a></button>
+            <button class="modal-link-btn"><a href="https://aigaa.github.io/js-project-calculator/" target="_blank">Project</a></button>
+        </div>
+    </div>
+    <div class="modal-container" id="modal4">
+        <div class="modal">
+            <button class="modal-close-btn" id="close4">X</button>
+            <h2>Responsive Website</h2>
+            <p>This project was done as part of 'Brainnest' Front-end Development program. The task was to re-create the pre-made 
+                design and color-scheme, and populate with content of choice.</p>
+            <p>Here I got to expand my knowledge on website responsivness and how it can work in different browsers and mobile
+                devices. Also, use and manipulation of Flex box.</p>
+            <button class="modal-link-btn"><a href="https://github.com/AiGaA/css-main-assignment" target="_blank">Source Code</a></button>
+            <button class="modal-link-btn"><a href="https://aigaa.github.io/css-main-assignment/" target="_blank">Project</a></button>
+        </div>
+    </div>
+    <div class="modal-container" id="modal5">
+        <div class="modal">
+            <button class="modal-close-btn" id="close5">X</button>
+            <h2>Personal Website</h2>
+            <p>I've done this website to showcase my work and projects I have been working on.</p>
+            <p>I have used different technologies to create this website to strengthen my knowledge in Web Development.</p>
+            <button class="modal-link-btn"><a href="https://github.com/AiGaA/portfolio-Aiga" target="_blank">Source Code</a></button>
+            <button class="modal-link-btn"><a href="https://aigaa.github.io/portfolio-Aiga/" target="_blank">Project</a></button>
         </div>
     </div>
 </body>
-<footer>&copy; AiGaA, 2022</footer>
+<footer>
+        <a class="skill-icon" href="https://github.com/AiGaA" target="_blank">
+            <img src="./images/github-icon-white.png" alt="Octocat - GitHub logo" id="github">
+        </a>
+    <button class="arrow-up"><a href="#">Go up!</a></button>
+    <p>&copy; AiGaA, 2022</p>
+</footer>
 </html>

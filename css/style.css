@@ -28,61 +28,83 @@
     src: url(../fonts/Montserrat-Medium.ttf) format('truetype');
 }
 
-* {
+*, *:before, *:after {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
 :root {
-    --bgColor: #ffffff;
+    --whiteColor: #ffffff;
     --primaryColor: #2C2B30;
     --secondaryColor: #4f4f51;
-    --lightColor: #D6D6D6;
+    --lightGreyColor: #D6D6D6;
     --accentColor: #F2C4CE;
     --darkAccentColor: #F5BF7C;
-    --primaryAccentColor: #EF8354;
+    --primaryAccentColor: #dd2892;
+    --purpleColor: #32194f;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
-    background: var(--bgColor);
+    margin: 0;
+    background: var(--whiteColor);
     color: var(--primaryColor);
     font-family: 'Montserrat-light', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 h1{
     font-family: 'PlayfairDisplay-Bold', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: var(--bgColor);
+    color: var(--whiteColor);
     font-size: 1.5rem;
 }
 
-header, footer {
+header, footer{
     display: flex;
     align-items: center;
     justify-content: space-around;
 }
 
-#header-id {
-    padding: 20px 8%;
-}
-
 footer {
     padding: 40px 0;
+    background: var(--purpleColor);
+    color: var(--whiteColor);
+    flex-direction: column;
 }
 
-a {
-    text-decoration: none;
-    color: var(--bgColor);
-    font-size: 1.2rem;
+.navbar {
+    position: fixed;
+    padding-top: 2%; 
+    width: 100%;
 }
 
-a:hover {
-    color: rgba(255, 255, 255, 0.8);
-    text-decoration: underline;
+.navbar-scroll {
+    padding: 15px 0;
+    background: var(--purpleColor);
+    border-bottom: 1px solid var(--secondaryColor);
+    transition: all .6s;
+    z-index: 99;
+    align-items: center;
+}
+
+.burger {
+    display: none;
+}
+
+.burger div {
+    width: 25px;
+    height: 2px;
+    background-color: var(--whiteColor);
+    margin: 5px;
 }
 
 .flex-nav ul {
     list-style: none;
     display: flex;
+    align-items: center;
 }
 
 .flex-nav li {
@@ -90,8 +112,36 @@ a:hover {
     padding: 0 10px;
 }
 
+a, .flex-nav a{
+    color: var(--whiteColor);
+    background: none;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.flex-nav a:hover {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: underline;
+}
+
+.flex-nav li.active {
+    background-color: rgba(122, 101, 149, 0.4);
+    transition: .4s ease background-color;
+    padding: 5px 10px;
+}
+
+.flex-nav li.active a{
+    color: var(--whiteColor);
+}
+
+.image-container {
+    background: url('../images/wallpaper.jpg') no-repeat center center fixed;
+    width: 100%;
+    background-size: cover;
+}
+
 .container {
-    background: linear-gradient(-45deg, rgba(242, 196, 206),  rgba(221, 40, 146), rgba(50, 25, 79), rgba(122, 101, 149));
+    background: linear-gradient(-45deg, rgba(69, 104, 220, 0.4),  rgba(43, 70, 161, 0.4), rgba(50, 25, 79, 0.4), rgba(122, 101, 149, 0.4));
     background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
 }
@@ -113,7 +163,7 @@ a:hover {
     padding: 10% 15%;
     align-items: center;
     justify-content: center;
-    color: var(--bgColor);
+    color: var(--whiteColor);
     font-size: 18px;
     text-align: center;
 }
@@ -126,18 +176,23 @@ a:hover {
 }
 
 h2 {
-    color: var(--bgColor);
+    color: var(--whiteColor);
     font-family: 'Montserrat-Bold', 'Segoe UI', Tahoma, Geneva, Verdana, sa;
     font-size: 2.5rem;
     padding: 16px 0;
     
 }
+
+button a:hover{
+    text-decoration: none;
+    color: var(--whiteColor);
+}
 /*
 #btn-portfolio {
     background: none;
-    border: 1.5px solid var(--bgColor);
+    border: 1.5px solid var(--whiteColor);
     border-radius: 6px;
-    color: var(--bgColor);
+    color: var(--whiteColor);
     padding: 8px 22px;
     margin: 10px 0px;
     font-size: 1rem;
@@ -145,14 +200,14 @@ h2 {
 
 #btn-portfolio:hover {
     background-color: rgba(255, 255, 255, 0.3);
-    color: var(--bgColor);
-    border: 1.5px solid var(--bgColor);
+    color: var(--whiteColor);
+    border: 1.5px solid var(--whiteColor);
 }
 */
 
 .text-section {
     display: flex;
-    padding: 10% 15%;
+    padding: 7% 15%;
     justify-content: center;
     flex-direction: column;
     align-items: center;
@@ -162,56 +217,56 @@ h3 {
     width: 53%;
     font-size: 2.2rem;
     text-align: center;
-    border-bottom: 1px solid rgb(73, 73, 73);
+    border-bottom: 1px solid #494949;
     line-height: 0.1em;
     margin: 10px 0 20px;
     font-family: 'Montserrat-Bold', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 h3 span {
-    background: #ffffff;
+    background: var(--whiteColor);
     padding: 0 10px;
 }
 
 .text-section.my-exp {
     /*background: rgb(240, 233, 250); */
     background:  rgb(122, 101, 149);
-    color: #ffffff;
-    border-bottom: #ffffff;
+    color: var(--whiteColor);
+    border-bottom: var(--whiteColor);
 }
 
 .text-section.my-exp h3 {
-    border-bottom: 1px solid #ffffff;
+    border-bottom: 1px solid var(--whiteColor);
 } 
 
 #exp-span{
     background: rgb(122, 101, 149);
-    color: #ffffff;
+    color: var(--whiteColor);
 }
 
-.resume-text {
-    padding-top: 4%;
+.resume-text{
+    padding-top: 5%;
     font-size: 22px;
     text-align: center;
+    font-weight: 600;
 }
 
 .resume-btn {
-    margin-top: 3%;
+    margin-top: 5%;
     font-size: 0.9em;
     background: none;
-    color: #ffffff;
+    color: var(--whiteColor);
     width: 12rem;
     height: 3rem;
     border-radius: 7px;
-    border: 1.6px solid #ffffff;
+    border: 1.6px solid var(--whiteColor);
     cursor: pointer;
     font-family: 'Montserrat-Medium';
 }
 
 .resume-btn:hover {
-    color: rgba(255, 255, 255, 0.8);
-    border: 1.6px solid rgba(255, 255, 255, 0.8);
-    text-decoration: none;
+    background: rgba(50, 25, 79, 0.35);
+    transition: .4s ease;
 }
 
 .skills-section {
@@ -248,10 +303,24 @@ h3 span {
     filter: grayscale(0%);
 }
 
+footer .skill-icon img{
+    margin: 0;
+    height: 40px;
+    width: auto;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
 .description-section {
     padding-top: 2.8em;
     text-align: center;
     font-size: 18px;
+}
+
+h4 {
+color: rgb(69, 104, 220);
 }
 
 #js {
@@ -259,7 +328,7 @@ h3 span {
 }
 
 .projects-section {
-    padding: 7rem 8%;
+    padding: 7% 8%;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -299,7 +368,7 @@ h3 span {
     width: 100%;
     height: 100%;
     background: rgba(122, 101, 149, 0.6);
-    color: #ffffff;
+    color: var(--whiteColor);
     font-family: 'Montserrat-Bold', sans-serif;
     text-align: center;
     display: flex;
@@ -344,6 +413,7 @@ h3 span {
     left: 0;
     height: 100vh;
     width: 100vw;
+    transition: opacity .3s ease;
 }
 
 .modal-container.show {
@@ -352,42 +422,181 @@ h3 span {
 }
 
 .modal {
-    background: #ffffff;
+    background: var(--whiteColor);
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     text-align: center;
-    padding: 30px 50px;
+    padding: 3% 4%;
     width: 600px;
     max-width: 100%;
+    position: relative;
 }
 
 .modal h2 {
     color: var(--primaryColor);
+    font-size: 2rem;
 }
 
+.modal-close-btn {
+    top: 5px;
+    right: 5px;
+    width: 1.7rem;
+    height: 1.7rem;
+    border-radius: 50%;
+    border: 1px solid rgba(79, 79, 81, 0.4);
+    color: rgba(79, 79, 81, 0.4);
+    background: none;
+    font-size: 1.5rem;
+    text-align: center;
+    position: absolute;
+}
+
+.modal-close-btn:hover {
+    color: var(--primaryAccentColor);
+    border: 1px solid var(--primaryAccentColor);
+    transition: .3s;
+}
+
+.modal-link-btn {
+    width: 140px;
+    margin: 1rem 1rem;
+    padding: 6px 10px;
+    background: rgba(122, 101, 149, 0.6);
+    border: 1px solid #efefef;
+    border-radius: 6px;
+}
+
+.modal-link-btn a {
+    text-decoration: none;
+    color: var(--whiteColor);
+    font-size: 1rem;
+    font-family: 'Montserrat-light', sans-serif;
+}
+
+.modal-link-btn:hover {
+    background: rgba(122, 101, 149, 0.9);
+
+}
+
+.email-button {
+    margin-top: 5%;
+    font-size: 0.9em;
+    background: rgb(50, 25, 79);
+    color: var(--whiteColor);
+    width: 12rem;
+    height: 3rem;
+    border-radius: 7px;
+    border: 1.6px solid var(--whiteColor);
+    cursor: pointer;
+    font-family: 'Montserrat-Medium';
+}
+
+.email-button:hover {
+    background: rgba(50, 25, 79, 0.6);
+    color: var(--whiteColor);
+}
+
+#contact-me-text p{
+    padding: 0 10%;
+}
+
+.arrow-up {
+    margin: 10px 0;
+    width: 100px;;
+    height: 30px;
+    background-color: transparent;
+    border: solid 0.6px var(--whiteColor);
+    color: var(--whiteColor);
+    text-align: center;
+    text-decoration: none;
+}
+
+.arrow-up:hover {
+     background-color: rgba(225, 225, 225, 0.2);
+}
+.arrow-up a {
+    font-size: 14px;
+    font-family: 'Montserrat-light', sans-serif;
+}
 
 /* Meda queries */
-@media screen and (max-width: 700px){
+
+@media screen and (max-width: 960px){
+    .section{
+        padding: 5rem 10%;
+    }
+}
+
+@media screen and (max-width: 768px){
     header, footer {
         display: flex;
         align-items: center;
         flex-wrap: wrap;
         padding: 8px 10px;
+        height: 4em;
+    }
+
+    body {
+        overflow-x: hidden;
     }
 
     .flex-nav {
-        padding: 15px 5px;
+        position: absolute;
+         right: 0px;
+         height: fit-content;
+         top: 4em;
+         background-color: var(--purpleColor);
+         display: flex;
+         align-items: center;
+         flex-direction: column;
+         width: 45%;
+         transform: translateX(100%);
+         transition: transform 0.5s ease-in;
+    }
+
+    .flex-nav li {
+        margin: 18px;
+    }
+
+    .burger {
+        display: block;
+        cursor: pointer;
+    }
+
+    div.hero {
+        padding-top: 20%;
     }
 
     h3 {
         width: auto;
         padding-top: 20px;
     }
-
-}
-
-@media screen and (max-width: 960px){
     .projects-section{
         padding: 5rem 2%;
     }
+
+    #logo-text {
+        padding: 0 20px;
+    }
+}
+
+@media screen and (max-width: 400px){
+    body {
+        width: 100%;
+    }
+    
+    .flex-nav a{
+        font-size: 12px;
+    }
+    .projects-section{
+        padding: 5rem 2%;
+    }
+    
+    .projects-modal {
+        width: fit-content;
+    }
+}
+
+.nav-active {
+    transform: translatex(0%);
 }
